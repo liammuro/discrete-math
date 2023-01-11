@@ -1,7 +1,7 @@
 # Injective Functions
 
 Def. 
-A function $f$ is <u>[injective](/Glossary/functions/injective.md)</u> provided that whenever $(x,b),(y,b) \epsilon f$ we must have $x=y$
+A function $f$ is <u>[injective](/Glossary/functions/injective-functions.md)</u> provided that whenever $(x,b),(y,b) \epsilon f$ we must have $x=y$
 
 
 i.e. if $x \neq y$, then $f(x) \neq f(y)$\
