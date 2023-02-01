@@ -30,11 +30,16 @@ Quad Prep \
 
 ### [2023](/Notes/2023/)
 
-#### [January](/Notes/2023/January/)
+#### [January](/Notes/2023/01/)
 
-- [2023-01-04.md](/Notes/2023/January/2023-01-04.md)
-- [2023-01-09.md](/Notes/2023/January/2023-01-09.md)
-- [2023-01-10.md](/Notes/2023/January/2023-01-10.md)
-- [2023-01-11.md](/Notes/2023/January/2023-01-11.md)
-- [2023-01-17.md](/Notes/2023/January/2023-01-17.md)
-- [2023-01-18.md](/Notes/2023/January/2023-01-18.md)
+- [January 04, 2023](/Notes/2023/01/2023-01-04.md)
+- [January 09, 2023](/Notes/2023/01/2023-01-09.md)
+- [January 10, 2023](/Notes/2023/01/2023-01-10.md)
+- [January 11, 2023](/Notes/2023/01/2023-01-11.md)
+- [January 17, 2023](/Notes/2023/01/2023-01-17.md)
+- [January 18, 2023](/Notes/2023/01/2023-01-18.md)
+- [January 24, 2023](/Notes/2023/01/2023-01-24.md)
+
+#### [February](/Notes/2023/02/)
+
+- [February 01, 2023](/Notes/2023/02/2023-02-01.md)
