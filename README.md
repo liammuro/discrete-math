@@ -44,3 +44,4 @@ Quad Prep \
 
 - [February 01, 2023](/Notes/2023/02/2023-02-01.md)
 - [February 07, 2023](/Notes/2023/02/2023-02-07.md)
+- [February 08, 2023](/Notes/2023/02/2023-02-08.md)
