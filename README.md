@@ -47,3 +47,13 @@ Quad Prep \
 - [February 08, 2023](/Notes/2023/02/2023-02-08.md)
 - [February 13, 2023](/Notes/2023/02/2023-02-13.md)
 - [February 14, 2023](/Notes/2023/02/2023-02-14.md)
+
+## Monday April 03, 2023
+
+LCM Lowest Common Multiple
+
+$$a = ({x}\bmod{b}) \\
+a,b \in \Z \quad b>0 \\
+q,r \quad 0\le r <b \\
+a = qb+r \\
+a \bmod b = r$$
