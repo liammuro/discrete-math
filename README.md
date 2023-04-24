@@ -76,9 +76,9 @@ The elements of $V$ are called vertices
 
 The elements of $E$ are called edges
 
-Definition: Let $G = (V,E)$ be a graph and let $u,v \in V$. We say $u$ is adjacent to $v$ provided that $\set{u,v} \in E$. The notation $u \sim v$ means $u$ is adjacent to $v$. We say that $u$ and $v$ are neighbors. The set of all neighbors of $v$ is called the neighborhood of $v$ and is denoted $N(v)$. 
+Definition: Let $G = (V,E)$ be a graph and let $u,v \in V$. We say $u$ is adjacent to $v$ provided that $\set{u,v} \in E$. The notation $u \sim v$ means $u$ is adjacent to $v$. We say that $u$ and $v$ are neighbors. The set of all neighbors of $v$ is called the neighborhood of $v$ and is denoted $N(v)$.
 
-$N(v) = \set{u \in V : u \sim v}$. 
+$N(v) = \set{u \in V : u \sim v}$.
 
 Definition: Let $G = (V,E)$ be a graph and $v \in V$ The degree of $v$ is the number of edges with which $v$ is incident. The degree of $v$ is denoted $d_G(v)$ or $d(v)$
 
@@ -121,8 +121,6 @@ $$\sum_{v \in v}{d(v)} = d(1) + d(2) + d(3) + d(4) + d(5) + d(6) + d(7) = 10 = 2
         Adam --- 1 & 2 & 7 & 12; 
 
 
-
-
 ```
 
         1(Adam) --- 2 & 7 & 12; 
@@ -137,3 +135,47 @@ $$\sum_{v \in v}{d(v)} = d(1) + d(2) + d(3) + d(4) + d(5) + d(6) + d(7) = 10 = 2
         10(Jack) --- 11; 
         11(Kim) --- 12; 
         12(Lilly);
+
+## Monday, April 24, 2023
+
+### Graph Theory (cont.)
+
+GRAPH THEORY VOCAB
+
+$\Delta G$ = max degree \
+$\delta G$ = min degree \
+$V(G)$ = vertex set \
+$E(G)$ = edge set \
+$|V|$ = order \
+$|E|$ = size \
+$v$ = vertices \
+$\epsilon$ = edges \
+complete graph = all vertices are neighbors
+
+Subgraph: \
+Definition: Let $G$ and $H$ be graphs. We call $G$ a subgraph of $H$ provided that $V(G) \subseteq V(H)$ and $E(G) \subseteq E(H)$.
+
+ex.
+$$V(G) = \set{1,2,3,4,5,6,7,8} \\
+E(G) = \set{\set{1,2},\set{2,3},\set{2,6},\set{3,6},\set{4,7},\set{6,8},\set{7,8}}$$
+
+$$V(H) = \set{1,2,3,4,5,6,7,8,9} \\
+E(H) = \set{\set{1,2},\set{1,4},\set{2,3},\set{2,5},\set{2,6},\set{3,6},\set{3,9},\set{4,7},\set{5,7},\set{6,8},\set{6,9},\set{7,8},\set{8,9}}$$
+
+Definition: Let $G$ and $H$ be graphs. We call $G$ a spanning subgraph of $H$ provided that $G$ is a subgraph of $H$ and $V(G) = V(H)$
+
+Edge deletion:
+
+$H - e$ \
+$V(H - e) = V(H)$ \
+$E(H - e) = E(H) - \set{e}$
+
+Vertex deletion:
+
+$V(H - v) = V(H) 0 \set{v}$ \
+and \
+$E(H - v) = \set{e \in E(H) : v \notin e} \quad e \rightarrow \set{\epsilon{_1},\epsilon{_2}}$
+
+Definition: Let $H$ be a graph and $A$ is a subset of the vertices of $H(A \subseteq V(H))$. The subset of $H$ induced on $A$ is $H[A]$ defined by
+$$V(H[A]) = A$$
+$$E(H[A]) = \set{\set{x,y} \in E[H] : x \in A, y \in A}$$
