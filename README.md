@@ -48,6 +48,8 @@ Quad Prep \
 - [February 13, 2023](/Notes/2023/02/2023-02-13.md)
 - [February 14, 2023](/Notes/2023/02/2023-02-14.md)
 
+----
+
 ## Monday April 03, 2023
 
 LCM Lowest Common Multiple
@@ -57,6 +59,8 @@ a,b \in \Z \quad b>0 \\
 q,r \quad 0\le r <b \\
 a = qb+r \\
 a \bmod b = r$$
+
+----
 
 ## Monday, April 17, 2023
 
@@ -136,6 +140,8 @@ $$\sum_{v \in v}{d(v)} = d(1) + d(2) + d(3) + d(4) + d(5) + d(6) + d(7) = 10 = 2
         11(Kim) --- 12; 
         12(Lilly);
 
+----
+
 ## Monday, April 24, 2023
 
 ### Graph Theory (cont.)
@@ -179,3 +185,44 @@ $E(H - v) = \set{e \in E(H) : v \notin e} \quad e \rightarrow \set{\epsilon{_1},
 Definition: Let $H$ be a graph and $A$ is a subset of the vertices of $H(A \subseteq V(H))$. The subset of $H$ induced on $A$ is $H[A]$ defined by
 $$V(H[A]) = A$$
 $$E(H[A]) = \set{\set{x,y} \in E[H] : x \in A, y \in A}$$
+
+----
+
+## Tuesday, May 01, 2023
+
+### Graph Theory (cont..)
+
+Let $G$ be a graph. Let $S$ be the subset of vertices $S \subseteq V(G)$. $S$ is called a clique provided that any two distinct vertices in $S$ are adjacent.  
+
+$\omega (g)$ denotes the largest order clique number.
+
+Let $G$ be a graph. A subset of vertices $S \subseteq V(G)$ is called an independent set provided that no two vertices are adjacent.
+
+$\alpha (G)$ denotes the largest order of an independence number.
+
+Let $G$ be a graph. The complement of $G$ denoted by $\overline G$ defined by
+$$V(\overline{G}) = V(G)$$
+$$E(\overline{G}) = \set{x \sim y, x \land y \in V(G) : x \neq y, x \sim y \notin E(G)}$$
+
+----
+
+## Tuesday, May 09, 2023
+
+### Graph Theory (cont...)
+
+Preposition: Let$G$ be a graph. A subset $V(G)$ is a clique of $G$ iff it is an independent set of $\overline{G}$.
+
+$$\omega(G) = \alpha(\overline{G})$$
+$$\alpha(G) = \omega(\overline{G})$$
+
+Ramsay's Theorem
+
+Prop. Let $G = (V,E), |V| \geq 6$. Then $\omega(G) \geq 3$ or $\omega(\overline{G}) \geq 3$
+
+Among six people, there are three people where any two of them are friends or there are three such that no two of them are friends.
+
+Proof: Let $v$ be a vertex of $G$. Consider $d(v) \geq 3$ or $d(v) > 3$
+
+First consider $d(v) \geq 3$. This means $v$ has three neighbors, call them $x,y,z$. If an of (or more) of $xy, yz, xz$ is an edge of $G$, then $G$ contains a clique of size $3$, so $\omega(G) \geq 3$. However, if none of them are edges in $G$, then they are edges in $\overline{G}$. So $\omega(\overline{G}) \geq 3$.
+
+Now we can consider $d(v) \leq 2$. So there are five neighbors in $G$, so there are at least three neighbors to which $v$ is not adjacent. Call them $x,y,z$. If all of $xy, yz, xz$ is in $G$, then we have a clique in $G$ of size $3$, so $\omega(G) \geq 3$. If not, then we have a clique of size $3$ in $\overline{G}$, so $\omega(\overline{G}) \geq 3$. $\square$
