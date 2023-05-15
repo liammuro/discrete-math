@@ -226,3 +226,45 @@ Proof: Let $v$ be a vertex of $G$. Consider $d(v) \geq 3$ or $d(v) > 3$
 First consider $d(v) \geq 3$. This means $v$ has three neighbors, call them $x,y,z$. If an of (or more) of $xy, yz, xz$ is an edge of $G$, then $G$ contains a clique of size $3$, so $\omega(G) \geq 3$. However, if none of them are edges in $G$, then they are edges in $\overline{G}$. So $\omega(\overline{G}) \geq 3$.
 
 Now we can consider $d(v) \leq 2$. So there are five neighbors in $G$, so there are at least three neighbors to which $v$ is not adjacent. Call them $x,y,z$. If all of $xy, yz, xz$ is in $G$, then we have a clique in $G$ of size $3$, so $\omega(G) \geq 3$. If not, then we have a clique of size $3$ in $\overline{G}$, so $\omega(\overline{G}) \geq 3$. $\square$
+
+----
+
+## Monday, May 15, 2023
+
+### Graph Theory (cont....)
+
+#### CONNECTION YAY
+
+Definition: Let $G$ be a graph and $u,v \in V(G)$. We say $u$ is connected to $v$ provided that there is a $(u,v)$-path in $G$.
+$$u \sim \dots \sim \dots \sim v$$
+
+Q: Reflexivity: $u$ connected to $u$? \
+A: Yes
+
+Q: Symmetric: $(u,v)$-path same as $(v,u)$-path? \
+A: Yes
+
+Q: Transitive: $x \sim y, \quad y \sim z \implies x \sim z$\
+A: Maybe
+
+Lemma: Let $G$ be a graph and $x,y \in V(G)$. If there is an $(x,y)$-walk in $G$, then we have an $(x,y)$-path in $G$.
+
+$$P = x \sim \dots \sim {?} \sim u * \sim \dots \sim u * \sim {??} \sim \dots \sim y$$
+
+Proof: Suppose $*$. The length is a natural number. WOP there is a shortest walk, $(x,y)$-walk, call ut $P$.\
+Suppose $P$ is not a $(x,y)$-path. Since it's not a path, there is a repeated vertex, call it $u$.\
+We form a new walk, $P'$ by deleting $**$\
+$\Rarr \Larr$\
+Therefore, $P$ is an $(x,y)$-path. $\square$
+
+Theorem: Let $G$ be a graph. The is-connected-to relation is an equivalence relation on $G$.
+
+Definition: A component of $G$ is a subgraph of $G$ induced onto the equivalence class of the is-connected-to relation on $V(G)$.
+
+Definition: A graph is connected provided each pair of vertices is connected by a path.\
+$\forall x,y \in V(G), \exists$ a $(x,y)$-path
+
+Components: $G[\set{1,2,3,4}] \quad G[\set{5}] \quad G[\set{6,7}]$
+
+Definition: Let $G$ be a graph. A vertex $v \in V(G)$ is called a cut vertex of $G$ provided that $G - v$ has more components than $G$.\
+Similarly, an edge $e \in E(G)$ is a cut edge of $G$ provided that $G - e$ has more components than $G$
