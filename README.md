@@ -254,7 +254,7 @@ $$P = x \sim \dots \sim {?} \sim u * \sim \dots \sim u * \sim {??} \sim \dots \s
 Proof: Suppose $*$. The length is a natural number. WOP there is a shortest walk, $(x,y)$-walk, call ut $P$.\
 Suppose $P$ is not a $(x,y)$-path. Since it's not a path, there is a repeated vertex, call it $u$.\
 We form a new walk, $P'$ by deleting $**$\
-$\Rarr \Larr$\
+$\Rarr \! \Larr$\
 Therefore, $P$ is an $(x,y)$-path. $\square$
 
 Theorem: Let $G$ be a graph. The is-connected-to relation is an equivalence relation on $G$.
@@ -268,3 +268,46 @@ Components: $G[\set{1,2,3,4}] \quad G[\set{5}] \quad G[\set{6,7}]$
 
 Definition: Let $G$ be a graph. A vertex $v \in V(G)$ is called a cut vertex of $G$ provided that $G - v$ has more components than $G$.\
 Similarly, an edge $e \in E(G)$ is a cut edge of $G$ provided that $G - e$ has more components than $G$
+
+## Tuesday, May 16, 2023
+
+### Graph Theory (cont.....)
+
+#### TREES YAYAYAY
+
+Def. A cycle is a walk of length at least $\ge 3$ in which the first and last vertex is the same. but no other vertex are repeated.
+
+Def. Let $G$ be a graph. If $G$ contains no cycles, then we call it acyclic. Alternatively, we call it a forest.
+
+Def. A tree is a connected, acyclic graph.  [connected forest]
+
+Theorem: $G$ is a tree iff there is distinct path between any two vertices.
+
+Proof: $G$ is a tree (it is connected and acyclic)\
+For the sake of contradiction, assume there are two or more different $(a,b)$-paths.\
+This would form a cycle, and as $G$ is a tree: 👉👈\
+$\Rarr \! \Larr$
+
+Unique $(a,b)$-path\
+Connected: $\forall x,y \in V(G)$, there is an $(x,y)$-path.\
+Suppose that there is a cyclic subgraph. That means there are two distinct paths for a given $x,y$.\
+But we have only unique $(x,y)$-paths.\
+Because $G$ is connected and acyclic, it makes it a tree. $\square$
+
+Theorem: Let $G$ be a connected graph. Then $G$ is a tree iif every edge of $G$ is a cut edge.
+
+Def. A leaf of a graph is a vertex of degree 1. Also know as end vertices, pendant vertices.
+
+Theorem: Every tree with at least two vertices has a leaf.
+
+Proof: Let $T$ me a tree w/ at least two vertices.\
+Let's look at the longest path in $T$, call it $P$.\
+$P = v_0 \sim v_1 \sim \dots \sim v_l, \quad l \ge 1$\
+We claim that $v_0$ and $v_l$ are leafs.\
+SFC, $v_0$ is nt a leaf. $v_1$ is a neighbor. Let's say $x$ is another neighbor. $d(v_0) \ge 2$\
+$P = v_0 \sim v_1 \sim \dots \sim x \sim v_0$ cannot exist\
+$Q = x \sim v_0 \sim v_1 \sim \dots \sim v_0$ cannot exist as $Q$ is longer than $P$\
+$\Rarr \! \Larr$\
+$\therefore v_0$ is a leaf. Same for $v_l$
+
+
