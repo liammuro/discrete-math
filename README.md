@@ -269,6 +269,8 @@ Components: $G[\set{1,2,3,4}] \quad G[\set{5}] \quad G[\set{6,7}]$
 Definition: Let $G$ be a graph. A vertex $v \in V(G)$ is called a cut vertex of $G$ provided that $G - v$ has more components than $G$.\
 Similarly, an edge $e \in E(G)$ is a cut edge of $G$ provided that $G - e$ has more components than $G$
 
+----
+
 ## Tuesday, May 16, 2023
 
 ### Graph Theory (cont.....)
@@ -310,4 +312,28 @@ $Q = x \sim v_0 \sim v_1 \sim \dots \sim v_0$ cannot exist as $Q$ is longer than
 $\Rarr \! \Larr$\
 $\therefore v_0$ is a leaf. Same for $v_l$
 
+----
 
+## Wednesday, May 17, 2023
+
+### Graph Theory (cont......)
+
+#### rest of the TREES YAYAYAY
+
+Prop: $T \in ⫪$ Let $v$ be a leaf. Then $T - v$ is a tree.
+
+Proof: $T - v$ does not have a cycle because if it did, $T$ would have a cycle, which would contradict the definition of a tree. 👉👈
+
+Let $P$ be an $(a,b)$-path that doesn't contain $v$.\
+Since $T$ is connected, every edge is a cut edge.\
+If we cut off the edge linking $v$ to the main component, $P$ still exists in $T - v$ because $d(v) = 1$, so there are no vertices in $P$ that are affected. $\square$
+
+Theorem: Let $T \in ⫪& with $n \ge 1$ vertices. Then $T$ has $n - 1 edges$.
+
+Proof: Base case: $n = 1$ vertices, $n - 1 = 0$ edges
+
+Inductive hypothesis: Suppose this is true for $n = k$ vertices. \
+Let $T$ be a tree with $n = k + 1$ vertices\
+We want to prove $T$ has $n-1 = k$ edges.\
+Let $v$ be a leaf on $T$. Let $T' = T -v$\
+We consider the case where $v$ is not a leaf. Then $T' = T - v$ will result in a disconnected graph, which is therefore not a tree.  
