@@ -328,7 +328,7 @@ Let $P$ be an $(a,b)$-path that doesn't contain $v$.\
 Since $T$ is connected, every edge is a cut edge.\
 If we cut off the edge linking $v$ to the main component, $P$ still exists in $T - v$ because $d(v) = 1$, so there are no vertices in $P$ that are affected. $\square$
 
-Theorem: Let $T \in ⫪& with $n \ge 1$ vertices. Then $T$ has $n - 1 edges$.
+Theorem: Let $T \in ⫪$ with $n \ge 1$ vertices. Then $T$ has $n - 1$ edges.
 
 Proof: Base case: $n = 1$ vertices, $n - 1 = 0$ edges
 
