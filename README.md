@@ -254,7 +254,7 @@ $$P = x \sim \dots \sim {?} \sim u * \sim \dots \sim u * \sim {??} \sim \dots \s
 Proof: Suppose $*$. The length is a natural number. WOP there is a shortest walk, $(x,y)$-walk, call ut $P$.\
 Suppose $P$ is not a $(x,y)$-path. Since it's not a path, there is a repeated vertex, call it $u$.\
 We form a new walk, $P'$ by deleting $**$\
-$\Rarr \! \Larr$\
+$\Rightarrow \! \Leftarrow$\
 Therefore, $P$ is an $(x,y)$-path. $\square$
 
 Theorem: Let $G$ be a graph. The is-connected-to relation is an equivalence relation on $G$.
@@ -288,7 +288,7 @@ Theorem: $G$ is a tree iff there is distinct path between any two vertices.
 Proof: $G$ is a tree (it is connected and acyclic)\
 For the sake of contradiction, assume there are two or more different $(a,b)$-paths.\
 This would form a cycle, and as $G$ is a tree: 👉👈\
-$\Rarr \! \Larr$
+$\Rightarrow \! \Leftarrow$
 
 Unique $(a,b)$-path\
 Connected: $\forall x,y \in V(G)$, there is an $(x,y)$-path.\
@@ -309,7 +309,7 @@ We claim that $v_0$ and $v_l$ are leafs.\
 SFC, $v_0$ is nt a leaf. $v_1$ is a neighbor. Let's say $x$ is another neighbor. $d(v_0) \ge 2$\
 $P = v_0 \sim v_1 \sim \dots \sim x \sim v_0$ cannot exist\
 $Q = x \sim v_0 \sim v_1 \sim \dots \sim v_0$ cannot exist as $Q$ is longer than $P$\
-$\Rarr \! \Larr$\
+$\Rightarrow \! \Leftarrow$\
 $\therefore v_0$ is a leaf. Same for $v_l$
 
 ----
