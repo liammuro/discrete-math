@@ -254,7 +254,7 @@ $$P = x \sim \dots \sim {?} \sim u * \sim \dots \sim u * \sim {??} \sim \dots \s
 Proof: Suppose $*$. The length is a natural number. WOP there is a shortest walk, $(x,y)$-walk, call ut $P$.\
 Suppose $P$ is not a $(x,y)$-path. Since it's not a path, there is a repeated vertex, call it $u$.\
 We form a new walk, $P'$ by deleting $**$\
-$\Rightarrow \! \Leftarrow$\
+$\Rightarrow \hspace{-4 mu} \Leftarrow$\
 Therefore, $P$ is an $(x,y)$-path. $\square$
 
 Theorem: Let $G$ be a graph. The is-connected-to relation is an equivalence relation on $G$.
@@ -288,7 +288,7 @@ Theorem: $G$ is a tree iff there is distinct path between any two vertices.
 Proof: $G$ is a tree (it is connected and acyclic)\
 For the sake of contradiction, assume there are two or more different $(a,b)$-paths.\
 This would form a cycle, and as $G$ is a tree: 👉👈\
-$\Rightarrow \! \Leftarrow$
+$\Rightarrow \hspace{-4 mu} \Leftarrow$
 
 Unique $(a,b)$-path\
 Connected: $\forall x,y \in V(G)$, there is an $(x,y)$-path.\
@@ -309,7 +309,7 @@ We claim that $v_0$ and $v_l$ are leafs.\
 SFC, $v_0$ is nt a leaf. $v_1$ is a neighbor. Let's say $x$ is another neighbor. $d(v_0) \ge 2$\
 $P = v_0 \sim v_1 \sim \dots \sim x \sim v_0$ cannot exist\
 $Q = x \sim v_0 \sim v_1 \sim \dots \sim v_0$ cannot exist as $Q$ is longer than $P$\
-$\Rightarrow \! \Leftarrow$\
+$\Rightarrow \hspace{-4 mu} \Leftarrow$\
 $\therefore v_0$ is a leaf. Same for $v_l$
 
 ----
@@ -337,3 +337,24 @@ Let $T$ be a tree with $n = k + 1$ vertices\
 We want to prove $T$ has $n-1 = k$ edges.\
 Let $v$ be a leaf on $T$. Let $T' = T -v$\
 We consider the case where $v$ is not a leaf. Then $T' = T - v$ will result in a disconnected graph, which is therefore not a tree.  
+
+----
+
+## Monday, May 22, 2023
+
+### Graph Theory (cont.......)
+
+#### rest of the TREES YAYAYAYay
+
+Def. Let $G$ be a graph. A spanning tree of $G$ is a spanning subgraph of $G$ that is a tree. (i.e. has all the vertices of $G$)
+
+Theorem. A graph is a spanning tree iff it is connected.
+
+Proof: ($\Leftarrow$) Suppose $G$ has a spanning subgraph, $T$. We want to shat $G$ is connected. Let $u,v \in V(G)$. Since $T$ is spanning, we have $V(T) = V(G)$, so $u,v \in V(T)$. Since $T$ is connected, there is a $(u,v)$-path in $T,P$. Since $T$ is a subgraph of $G$, $P$ is a $(u,v)$-path in $G$. Therefore, $G$ is connected.
+
+Proof: ($\Rightarrow$) Suppose $G$ is connected. Let $T$ be a spanning connected subgraph of $G$ with the least number of edges./
+We claim that $T$ is a tree. By construction, $T$ is connected. Furthermore, we claim that every edge of $T$ is a cut edge. Otherwise, if $e \in E(T)$ were not a cut edge of $T$, than $T-e$ would be a smaller spanning subgraph of $G$. $\Rightarrow \hspace{-4 mu} \Leftarrow$ Therefore, every edge of $T$ is a cut edge and $T$ is a tree, So $G$ has a spanning tree. $\square$
+
+Theorem: Let $G$ be connected.
+
+Lemma: Let $G$ be a graph whose vertices have even degree. Then no edge of $G$ is a cut edge.
