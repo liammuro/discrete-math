@@ -358,3 +358,42 @@ We claim that $T$ is a tree. By construction, $T$ is connected. Furthermore, we 
 Theorem: Let $G$ be connected.
 
 Lemma: Let $G$ be a graph whose vertices have even degree. Then no edge of $G$ is a cut edge.
+
+----
+
+## Tuesday, May 23, 2023
+
+### Graph Theory (cont........)
+
+#### Lemmas R Scary
+
+$\bar{G} = $ Let $G$ be a graph. $\bar{G}$ is\
+$V(G) = V(\bar{G})$\
+$E(\bar{G}) = \set{xy : x,y \in V(\bar{G}), x \ne y, xy \notin E(G)}$
+
+Lemma: $G$ is a connected graph and has two vertices of odd degree. Let $a$ be a vertex of odd degree and $d(a) \ne 1$. Then at least one edge incident with $a$ is not a cut edge.
+
+SFC all edges are cut edges. Since $G$ is connected, $\exists (a,b)$-path $P$. Let $e$ be any neighbor to $a$ not on $P$.\
+Now consider $G - e = G'$
+
+Since $d(a) is even after the deletion, $b$ is in the component with $a$ but $b$ is the only odd degree vertex $\Rightarrow \hspace{-4 mu} \Leftarrow$
+
+Theorem: Let $G$ be a connected graph whose vertices all have even degree. Then doe every vertex $v \in V(G)$, there is an Eulerian tour starting and ending at $v$.
+
+Theorem: Let $G$ be a connected graph with exactly two vertices of odd degree, $a$ and $b$. Then $G$ has an Eulerian trail beginning at $a$ and ending at $b$.
+
+Proof: Induction on number of edges (induction loading)
+
+Base case: $0$ edges\
+Base case: $1$ edge
+
+Induction hypothesis: Assume theorems true for $n = m$ edges. We want to prove for $n = m + 1$ edges.
+
+Let $G$ be a graph with $m + 1$ edges
+
+Case 1: All of $G$'s vertices have even degree.\
+Let $v$ be any vertex of $G$. Let $w$ be $v$'s neighbor.\
+Let $G' = G - vw$. So $v$ and $w$ have odd degrees in $G'$\
+$G'$ is connected per lemma(Let $G$ be a graph whose vertices have even degree. Then no edge of $G$ is a cut edge)\
+$\implies$ by induction, $G'$ has an Eulerian trail starting at $v$ and ending at $w$.
+Add bak $vw$ to $G'$, then we get an Eulerian tour starting + ending at $v$.
