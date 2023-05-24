@@ -397,3 +397,49 @@ Let $G' = G - vw$. So $v$ and $w$ have odd degrees in $G'$\
 $G'$ is connected per lemma(Let $G$ be a graph whose vertices have even degree. Then no edge of $G$ is a cut edge)\
 $\implies$ by induction, $G'$ has an Eulerian trail starting at $v$ and ending at $w$.
 Add bak $vw$ to $G'$, then we get an Eulerian tour starting + ending at $v$.
+
+----
+
+## Wednesday, May 23, 2023
+
+### Graph Theory (cont.........)
+
+#### Coloring
+
+Def: Let $G$ be a graph. $k \in \N$. A $k$-coloring of $G$ is the function\
+$f: V(G) \to {1,2,\dots,k}$\
+We call this coloring proper provided \
+$\forall\ xy \in E(G), f(x) \ne f(y)$
+
+If a graph has a proper coloring, than we call it $k$-colorable
+
+Def: Let $G$ be a graph. The smallest integer $k$ for which $G$ is $k$-colorable is called chromatic number of $G$.\
+Denoted $\chi(G)$
+
+Prop. Let $G$ be a subgraph of $H$. $\chi(G) \le \chi(H)$
+
+Prop. Let $G$ be a graph with maximum degree $\Delta$.\
+Than $\chi(G) \le \Delta + 1$
+
+Proof: $V(g) = \set{v_1, v_2, \dots, v_n}$\
+$f: V(G) \to \set{1, 2, \dots, \Delta + 1}$
+
+$d(v) \le \Delta\ \forall\ v \in V(G)$
+
+Since every vertex has at most $\Delta$ neighbors, thn the coloring is proper if we have a palette of $\Delta + 1$.
+
+Ex. What is the chromatic number of $C_n$, a cycle with $n$ vertices?\
+$\forall\ n > 2, \chi(C_n) = \left\{ \begin{array}{}
+    2 \text{ if } n \text{ even} \\
+    3 \text{ if } n \text{ odd}
+\end{array} \right\}$
+
+Prop. A graph $G$ is one-colorable iff it is edgeless
+
+Def. A graph $G$ is called bipartite if it is two-colorable.\
+Let
+$G = (V,E), \begin{array}{}
+    X \text{ vertices of color } a \\
+    Y \text{ vertices of color } b
+\end{array} $
+be a bipartitive graph with the bipartition $V = X \cup Y$
