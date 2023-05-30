@@ -400,7 +400,7 @@ Add bak $vw$ to $G'$, then we get an Eulerian tour starting + ending at $v$.
 
 ----
 
-## Wednesday, May 23, 2023
+## Wednesday, May 24, 2023
 
 ### Graph Theory (cont.........)
 
@@ -443,3 +443,15 @@ $G = (V,E), \begin{array}{}
     Y \text{ vertices of color } b
 \end{array} $
 be a bipartitive graph with the bipartition $V = X \cup Y$
+
+----
+
+## Tuesday, May 30, 2023
+
+### Graph Theory (cont..........)
+
+Def. A planar graph is a graph that has a crossing-free embedding in the plane.
+
+Thm. (Euler's formula) Let $G$ be a connected planar graph with $v$ vertices and $e$ edges. Choose a crossing-free embedding for $G$ and let $f$ be the number of faces. Then: $$v - e + f = 2$$
+
+The sum of the degrees of the faces in a crossing-free embedding is $$2 \times |E(G)|$$
