@@ -376,7 +376,7 @@ Lemma: $G$ is a connected graph and has two vertices of odd degree. Let $a$ be a
 SFC all edges are cut edges. Since $G$ is connected, $\exists (a,b)$-path $P$. Let $e$ be any neighbor to $a$ not on $P$.\
 Now consider $G - e = G'$
 
-Since $d(a) is even after the deletion, $b$ is in the component with $a$ but $b$ is the only odd degree vertex $\Rightarrow \hspace{-4 mu} \Leftarrow$
+Since $d(a)$ is even after the deletion, $b$ is in the component with $a$ but $b$ is the only odd degree vertex $\Rightarrow \hspace{-4 mu} \Leftarrow$
 
 Theorem: Let $G$ be a connected graph whose vertices all have even degree. Then doe every vertex $v \in V(G)$, there is an Eulerian tour starting and ending at $v$.
 
