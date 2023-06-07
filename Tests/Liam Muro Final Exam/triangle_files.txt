@@ -1,0 +1,3 @@
+0018_example.txt
+0018_triangle.txt
+0067_triangle.txt

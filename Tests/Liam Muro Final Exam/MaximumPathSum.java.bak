@@ -1,0 +1,73 @@
+import java.io.File;
+import java.util.Scanner;
+
+public class MaximumPathSum {
+
+    public static int[] getTriangleArr(String fileName) throws java.io.FileNotFoundException {
+        int numInts = 0;
+
+        Scanner scTri = new Scanner(new File(fileName));
+
+        while (scTri.hasNextInt()) {
+            numInts++;
+            scTri.nextInt();
+        }
+
+        int[] triangleArr = new int[numInts];
+
+        scTri = new Scanner(new File(fileName));
+
+        for (int i = 0; i < numInts; i++) {
+            triangleArr[i] = scTri.nextInt();
+        }
+
+
+        scTri.close();
+
+        return triangleArr;
+    }
+
+    public static int getNumRows(int[] triangle) {
+        double numRows = ((-1 + Math.sqrt(1 + (8 * triangle.length)))/2);
+    
+        return (int)numRows;
+    }
+
+    public static int getFirstEntry(int line) {
+        double lineIndex = ((Math.pow(2 * line + 1, 2) - 1) / 8);
+        
+    
+        return (int)lineIndex;
+    }
+
+    public static int getMax(int[] triangle, int line, int entry){
+        if (line >= getNumRows(triangle)) {
+            return 0;
+        }
+
+        int leftMax = getMax(triangle, line + 1, entry);
+        int rightMax = getMax(triangle, line + 1, entry + 1);
+
+        if (leftMax > rightMax) {
+            return leftMax + triangle[getFirstEntry(line) + entry];
+        } else {
+            return rightMax + triangle[getFirstEntry(line) + entry];
+        }
+    }
+    public static void main(String[] args) throws java.io.FileNotFoundException {
+        Scanner console = new Scanner(System.in);
+        System.out.print("Triangle file: ");
+        int[] triangleArr = getTriangleArr(console.nextLine());
+        console.close();
+
+        // int[] triangleArr = getTriangleArr("0018_example.txt");
+
+        System.out.println("Number of entries: " + triangleArr.length);
+        System.out.println("Number of rows: " + getNumRows(triangleArr));
+        System.out.println(getFirstEntry(0) + ", " + triangleArr[getFirstEntry(0)]);
+
+        System.out.println("max: " + getMax(triangleArr,0,0));
+
+
+    }
+}

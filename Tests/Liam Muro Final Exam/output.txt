@@ -1,0 +1,8 @@
+Liam Muro 2023 Discrete Math Final Exam (Programming):
+
+testing file: 0018_example.txt
+        max: 23
+testing file: 0018_triangle.txt
+        max: 1074
+testing file: 0067_triangle.txt
+        max: 7273
