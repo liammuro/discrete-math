@@ -55,12 +55,12 @@ public class MaximumPathSum {
         }
     }
     public static void main(String[] args) throws java.io.FileNotFoundException {
-        Scanner console = new Scanner(System.in);
-        System.out.print("Triangle file: ");
-        int[] triangleArr = getTriangleArr(console.nextLine());
-        console.close();
+        // Scanner console = new Scanner(System.in);
+        // System.out.print("Triangle file: ");
+        // int[] triangleArr = getTriangleArr(console.nextLine());
+        // console.close();
 
-        // int[] triangleArr = getTriangleArr("0018_example.txt");
+        int[] triangleArr = getTriangleArr(args[0]);
 
         System.out.println("Number of entries: " + triangleArr.length);
         System.out.println("Number of rows: " + getNumRows(triangleArr));
